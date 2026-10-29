@@ -1,0 +1,502 @@
+{
+  "n_rows_train": 39420,
+  "n_rows_test": 39414,
+  "n_runs_train": 50,
+  "n_runs_test": 50,
+  "n_failed_train": 5,
+  "failed_runs": [
+    11,
+    43,
+    44,
+    46,
+    47
+  ],
+  "feed_levels": [
+    59.1,
+    79.2,
+    118.2,
+    158.5,
+    177.3,
+    236.4,
+    237.7,
+    317.0
+  ],
+  "missing": {
+    "train": {
+      "NaN cells": 0,
+      "duplicated rows": 0,
+      "time gaps > 0.1 s (missing samples)": 0,
+      "non-monotonic timestamps": 1,
+      "runs not starting at t = 0.1 s": 3,
+      "\u0394p == 0 rows (sensor dead-band)": 5672,
+      "\u0394p == 0 rows after t > 30 s": 556,
+      "Flow_rate == 0 rows (dropouts)": 45,
+      "runs with Flow_rate dropouts": 8,
+      "\u0394p outside sensor range [0, 2500]": 0,
+      "runs without observed failure (censored/truncated)": 45
+    },
+    "test": {
+      "NaN cells": 0,
+      "duplicated rows": 0,
+      "time gaps > 0.1 s (missing samples)": 0,
+      "non-monotonic timestamps": 0,
+      "runs not starting at t = 0.1 s": 9,
+      "\u0394p == 0 rows (sensor dead-band)": 2722,
+      "\u0394p == 0 rows after t > 30 s": 116,
+      "Flow_rate == 0 rows (dropouts)": 13,
+      "runs with Flow_rate dropouts": 13,
+      "\u0394p outside sensor range [0, 2500]": 0,
+      "runs without observed failure (censored/truncated)": 50
+    }
+  },
+  "zero_dp_median_t": 10.4,
+  "zero_dp_p95_t": 40.5,
+  "rul_last_test": {
+    "count": 50.0,
+    "mean": 36.95,
+    "std": 33.0,
+    "min": 1.9,
+    "25%": 13.65,
+    "50%": 26.5,
+    "75%": 52.22,
+    "max": 136.6
+  },
+  "V_censor": 10603.838102443038,
+  "dp_end_by_group": {
+    "A2|high (~81)": 581.6,
+    "A2|low (~58)": 293.6,
+    "A3|high (~81)": 295.5,
+    "A3|low (~58)": 180.5,
+    "A4|low (~58)": 137.8
+  },
+  "spearman_dp": {
+    "Differential_pressure": 1.0,
+    "Time": 0.709,
+    "V": 0.815,
+    "Flow_rate": 0.312,
+    "Dust_feed": -0.075,
+    "rho": -0.318
+  },
+  "outliers": {
+    "train": {
+      "\u0394p outside sensor range": 0,
+      "\u0394p flagged by global IQR rule (NOT outliers: near-failure values)": 3292,
+      "\u0394p jumps > 50 Pa between consecutive samples": 0,
+      "\u0394p spikes (Hampel: > 5 MAD and > 20 Pa)": 17,
+      "Flow > 8 units from set-point (non-zero)": 104
+    },
+    "test": {
+      "\u0394p outside sensor range": 0,
+      "\u0394p flagged by global IQR rule (NOT outliers: near-failure values)": 3592,
+      "\u0394p jumps > 50 Pa between consecutive samples": 0,
+      "\u0394p spikes (Hampel: > 5 MAD and > 20 Pa)": 28,
+      "Flow > 8 units from set-point (non-zero)": 84
+    }
+  },
+  "flow_offsetpoint_median_t": 0.2,
+  "n_spikes": {
+    "train": 17,
+    "test": 28
+  },
+  "n_removed_rows": 1,
+  "label_val": {
+    "rms": {
+      "exponential": 62.84,
+      "linear tail": 161.47,
+      "power": 231.79,
+      "quadratic": 145.29
+    },
+    "bias": {
+      "exponential": 12.23,
+      "linear tail": 101.45,
+      "power": 90.08,
+      "quadratic": 52.98
+    },
+    "n_fail_to_fit": {
+      "exponential": 0,
+      "linear tail": 0,
+      "power": 0,
+      "quadratic": 1
+    }
+  },
+  "label_val_by_frac": {
+    "exponential": {
+      "0.3": 124.43,
+      "0.5": 14.77,
+      "0.7": 8.63,
+      "0.9": 4.29
+    },
+    "linear tail": {
+      "0.3": 285.35,
+      "0.5": 146.93,
+      "0.7": 35.71,
+      "0.9": 2.77
+    },
+    "power": {
+      "0.3": 460.84,
+      "0.5": 49.03,
+      "0.7": 11.0,
+      "0.9": 2.06
+    },
+    "quadratic": {
+      "0.3": 312.66,
+      "0.5": 41.07,
+      "0.7": 17.57,
+      "0.9": 4.31
+    }
+  },
+  "label_bias_by_frac": {
+    "exponential": {
+      "0.3": 64.23,
+      "0.5": -4.63,
+      "0.7": -6.5,
+      "0.9": -4.2
+    },
+    "linear tail": {
+      "0.3": 257.88,
+      "0.5": 116.19,
+      "0.7": 30.63,
+      "0.9": 1.09
+    },
+    "power": {
+      "0.3": 322.36,
+      "0.5": 34.82,
+      "0.7": 4.81,
+      "0.9": -1.68
+    },
+    "quadratic": {
+      "0.3": 190.03,
+      "0.5": 34.23,
+      "0.7": 12.69,
+      "0.9": 2.38
+    }
+  },
+  "best_form": "exponential",
+  "pseudo_V_by_dust": {
+    "A2": 12455.0,
+    "A3": 13318.0,
+    "A4": 14144.0
+  },
+  "pseudo_ext_median": 26.851441404331577,
+  "pseudo_obs_frac": {
+    "count": 45.0,
+    "mean": 0.794,
+    "std": 0.081,
+    "min": 0.64,
+    "25%": 0.747,
+    "50%": 0.788,
+    "75%": 0.856,
+    "max": 0.999
+  },
+  "n_train_samples": 3907,
+  "n_test_eval_samples": 3963,
+  "aft_censored": {
+    "log_feed": {
+      "coef": -1.1107256273511024,
+      "lo": -1.4840547036045069,
+      "hi": -0.7373965510976979,
+      "p": 5.500746120327673e-09
+    },
+    "A3": {
+      "coef": 1.2038054081480152,
+      "lo": -0.860436813618237,
+      "hi": 3.2680476299142676,
+      "p": 0.25304132954488656
+    },
+    "A4": {
+      "coef": 1.007492412640485,
+      "lo": -1.4589152909829481,
+      "hi": 3.473900116263918,
+      "p": 0.42335319306197405
+    },
+    "flow_high": {
+      "coef": -0.2546892055725014,
+      "lo": -0.6089066945245538,
+      "hi": 0.099528283379551,
+      "p": 0.1587606954472582
+    }
+  },
+  "aft": {
+    "coef": "{('lambda_', 'A3'): 0.1825, ('lambda_', 'A4'): 0.1859, ('lambda_', 'flow_high'): -0.0506, ('lambda_', 'log_feed'): -1.0049, ('lambda_', 'Intercept'): 9.4166, ('rho_', 'Intercept'): 2.2164}",
+    "rho": 9.174472821538808,
+    "b_logfeed": -1.0048919144062163,
+    "b_logfeed_ci": [
+      -1.0774297621537074,
+      -0.932354066658725
+    ],
+    "p": {
+      "log_feed": 2.394131319941948e-162,
+      "A3": 0.00021257300073097024,
+      "A4": 0.00017188790736908649,
+      "flow_high": 0.22340556335635187
+    },
+    "coef_lambda": {
+      "log_feed": -1.0048919144062163,
+      "A3": 0.1825464998583727,
+      "A4": 0.18590793265758557,
+      "flow_high": -0.05062180171143553
+    }
+  },
+  "cv": {
+    "M1 Weibull AFT": 17.750999054777335,
+    "M2 Random forest": 13.181684907276729,
+    "M3 XGBoost": 10.292825959641469,
+    "M4 Autoregressive (one-step, log units)": 0.25349309865615444
+  },
+  "m2_cv_table": {
+    "CV RMSE": {
+      "RF leaf=20 features=1.0": 13.18,
+      "RF leaf=5 features=1.0": 13.33,
+      "RF leaf=5 features=0.5": 13.77,
+      "RF leaf=20 features=0.5": 14.8
+    },
+    "std": {
+      "RF leaf=20 features=1.0": 5.06,
+      "RF leaf=5 features=1.0": 5.81,
+      "RF leaf=5 features=0.5": 3.06,
+      "RF leaf=20 features=0.5": 2.0
+    }
+  },
+  "m2_best": "RF leaf=20 features=1.0",
+  "m3_cv_table": {
+    "CV RMSE": {
+      "XGB depth=3 lr=0.05": 10.29,
+      "XGB depth=3 lr=0.1": 10.78,
+      "XGB depth=5 lr=0.05": 11.44,
+      "XGB depth=6 lr=0.1": 12.39
+    },
+    "std": {
+      "XGB depth=3 lr=0.05": 2.78,
+      "XGB depth=3 lr=0.1": 2.96,
+      "XGB depth=5 lr=0.05": 3.89,
+      "XGB depth=6 lr=0.1": 3.1
+    }
+  },
+  "m3_best": "XGB depth=3 lr=0.05",
+  "m4_cv_table": {
+    "CV one-step RMSE (log units)": {
+      "AR-XGB depth=3 lr=0.05": 0.2535,
+      "AR-XGB depth=3 lr=0.1": 0.2634,
+      "AR-XGB depth=5 lr=0.05": 0.2662,
+      "AR-XGB depth=6 lr=0.1": 0.2835
+    },
+    "std": {
+      "AR-XGB depth=3 lr=0.05": 0.0188,
+      "AR-XGB depth=3 lr=0.1": 0.0242,
+      "AR-XGB depth=5 lr=0.05": 0.028,
+      "AR-XGB depth=6 lr=0.1": 0.0295
+    }
+  },
+  "m4_best": "AR-XGB depth=3 lr=0.05",
+  "m4_cap_share": 0.0,
+  "m4_n_transitions": 3657,
+  "m4_onestep_ref": {
+    "zero growth": 0.46486199106518145,
+    "last growth": 0.5237790396825952
+  },
+  "test_last": {
+    "M1 Weibull AFT": {
+      "RMSE": 24.265,
+      "MAE": 17.058,
+      "Bias": -11.486,
+      "Within \u00b110 s [%]": 46.0,
+      "PHM score": 790.844
+    },
+    "M2 Random forest": {
+      "RMSE": 19.496,
+      "MAE": 13.788,
+      "Bias": -5.869,
+      "Within \u00b110 s [%]": 52.0,
+      "PHM score": 682.98
+    },
+    "M3 XGBoost": {
+      "RMSE": 18.779,
+      "MAE": 13.342,
+      "Bias": -10.731,
+      "Within \u00b110 s [%]": 54.0,
+      "PHM score": 320.778
+    },
+    "M4 Autoregressive": {
+      "RMSE": 15.195,
+      "MAE": 10.889,
+      "Bias": -9.346,
+      "Within \u00b110 s [%]": 62.0,
+      "PHM score": 160.967
+    }
+  },
+  "test_all": {
+    "M1 Weibull AFT": {
+      "RMSE": 46.848,
+      "MAE": 36.51,
+      "Bias": -32.929,
+      "Within \u00b110 s [%]": 18.042,
+      "PHM score": 1451011.212
+    },
+    "M2 Random forest": {
+      "RMSE": 40.297,
+      "MAE": 31.587,
+      "Bias": -28.595,
+      "Within \u00b110 s [%]": 23.29,
+      "PHM score": 557607.391
+    },
+    "M3 XGBoost": {
+      "RMSE": 38.298,
+      "MAE": 30.086,
+      "Bias": -29.102,
+      "Within \u00b110 s [%]": 22.988,
+      "PHM score": 307746.803
+    },
+    "M4 Autoregressive": {
+      "RMSE": 26.587,
+      "MAE": 21.477,
+      "Bias": -17.258,
+      "Within \u00b110 s [%]": 26.318,
+      "PHM score": 487532003.583
+    }
+  },
+  "best_model": "M4 Autoregressive",
+  "bootstrap": {
+    "M1 Weibull AFT \u2212 M2 Random forest": {
+      "diff": 4.768563237988229,
+      "lo": -1.7550288821753288,
+      "hi": 10.796155710562351,
+      "significant": false
+    },
+    "M1 Weibull AFT \u2212 M3 XGBoost": {
+      "diff": 5.485697859342327,
+      "lo": 1.0031455491834973,
+      "hi": 9.871103569192046,
+      "significant": true
+    },
+    "M1 Weibull AFT \u2212 M4 Autoregressive": {
+      "diff": 9.069912065252144,
+      "lo": 3.7360542131378423,
+      "hi": 14.844090219234625,
+      "significant": true
+    },
+    "M2 Random forest \u2212 M3 XGBoost": {
+      "diff": 0.7171346213540986,
+      "lo": -2.2891228980872604,
+      "hi": 4.918050091878327,
+      "significant": false
+    },
+    "M2 Random forest \u2212 M4 Autoregressive": {
+      "diff": 4.301348827263915,
+      "lo": 0.5957888254661438,
+      "hi": 8.844095715535412,
+      "significant": true
+    },
+    "M3 XGBoost \u2212 M4 Autoregressive": {
+      "diff": 3.5842142059098165,
+      "lo": 1.3893836305335616,
+      "hi": 5.699366416007399,
+      "significant": true
+    }
+  },
+  "closest_model_count": {
+    "M4": 20,
+    "M2": 14,
+    "M1": 10,
+    "M3": 6
+  },
+  "m3_importance": {
+    "log_feed": 44.83,
+    "dp_s": 8.89,
+    "slope10": 7.4,
+    "V": 1.86,
+    "rho": 1.15,
+    "dp_frac": 0.79,
+    "slope5": 0.48,
+    "mass": 0.28,
+    "A4": 0.05,
+    "A3": 0.02,
+    "flow_high": -0.01,
+    "curv": -0.19,
+    "flow_s": -0.49,
+    "gr10": -0.81,
+    "Time": -1.29
+  },
+  "policy": {
+    "Preventive (V = 10 600 mm\u00b3)": {
+      "Unplanned failures": 5.0,
+      "Mean wasted life [s]": 40.85,
+      "Life used [%]": 72.36
+    },
+    "Predictive \u2013 M1 Weibull AFT": {
+      "Unplanned failures": 11.0,
+      "Mean wasted life [s]": 18.3,
+      "Life used [%]": 89.53
+    },
+    "Predictive \u2013 M2 Random forest": {
+      "Unplanned failures": 19.0,
+      "Mean wasted life [s]": 15.85,
+      "Life used [%]": 92.54
+    },
+    "Predictive \u2013 M3 XGBoost": {
+      "Unplanned failures": 10.0,
+      "Mean wasted life [s]": 15.05,
+      "Life used [%]": 90.13
+    },
+    "Predictive \u2013 M4 Autoregressive": {
+      "Unplanned failures": 10.0,
+      "Mean wasted life [s]": 12.65,
+      "Life used [%]": 91.49
+    }
+  },
+  "alarm": {
+    "M1 Weibull AFT": {
+      "Precision": 0.239,
+      "Recall": 0.697,
+      "F1": 0.355
+    },
+    "M2 Random forest": {
+      "Precision": 0.4,
+      "Recall": 0.454,
+      "F1": 0.425
+    },
+    "M3 XGBoost": {
+      "Precision": 0.305,
+      "Recall": 0.655,
+      "F1": 0.416
+    },
+    "M4 Autoregressive": {
+      "Precision": 0.355,
+      "Recall": 0.815,
+      "F1": 0.495
+    }
+  },
+  "alarm_cm_best": [
+    [
+      3668,
+      176
+    ],
+    [
+      22,
+      97
+    ]
+  ],
+  "reference_replication": {
+    "Linear regression (reference set-up)": {
+      "MAE [Pa]": 4.4137,
+      "R\u00b2": 0.9968
+    },
+    "Naive persistence \u0394p(t+1s)=\u0394p(t)": {
+      "MAE [Pa]": 4.4119,
+      "R\u00b2": 0.996
+    }
+  },
+  "hypotheses": {
+    "H1": {
+      "Result": "accepted",
+      "Evidence": "best ML RMSE 15.2 s vs 24.3 s for the Weibull AFT; M1\u2212M2: +4.8 s [-1.8, +10.8]; M1\u2212M3: +5.5 s [+1.0, +9.9]; M1\u2212M4: +9.1 s [+3.7, +14.8]"
+    },
+    "H2": {
+      "Result": "accepted",
+      "Evidence": "beta(log feed) = -1.00 (95% CI -1.08 to -0.93), p = 2.39e-162; p(A3) = 0.000213, p(A4) = 0.000172, p(flow) = 0.223"
+    },
+    "H3": {
+      "Result": "accepted",
+      "Evidence": "M4 15.2 s vs M2 19.5 s and M3 18.8 s; M2\u2212M4: +4.3 s [+0.6, +8.8]; M3\u2212M4: +3.6 s [+1.4, +5.7]"
+    }
+  }
+}

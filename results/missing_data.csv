@@ -1,0 +1,12 @@
+,train,test
+NaN cells,0,0
+duplicated rows,0,0
+time gaps > 0.1 s (missing samples),0,0
+non-monotonic timestamps,1,0
+runs not starting at t = 0.1 s,3,9
+Δp == 0 rows (sensor dead-band),5672,2722
+Δp == 0 rows after t > 30 s,556,116
+Flow_rate == 0 rows (dropouts),45,13
+runs with Flow_rate dropouts,8,13
+"Δp outside sensor range [0, 2500]",0,0
+runs without observed failure (censored/truncated),45,50

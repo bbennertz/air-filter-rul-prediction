@@ -1,0 +1,6 @@
+,Unplanned failures,Mean wasted life [s],Life used [%]
+Preventive (V = 10 600 mm³),5.0,40.84876492194702,72.36379593359393
+Predictive – M1 Weibull AFT,11.0,18.297629866995806,89.5298544033846
+Predictive – M2 Random forest,19.0,15.852851053311808,92.54478230124056
+Predictive – M3 XGBoost,10.0,15.045544532537463,90.12575089423406
+Predictive – M4 Autoregressive,10.0,12.647281125351842,91.49061750257727

@@ -1,0 +1,8 @@
+Variable,Type,Unit,Physical meaning,Dependency,Controllability,Range train,Range test
+Data_No,integer (ID),–,Identifier of the life test (run),Grouping key,–,1 – 50,1 – 50
+Time,continuous,s,Elapsed time since the start of the run (10 Hz sampling),Independent (state),Non-controllable,0.1 – 179.4,0.1 – 258.1
+Differential_pressure,continuous,Pa,Pressure drop across the filter = health indicator; failure at 600 Pa,Dependent (response),"Non-controllable (sensor, 0–2500 Pa)",0 – 607.9,0 – 575
+Flow_rate,continuous,not stated (≈ L/min),"Air flow through the filter, corrected for the dust feed; set-point of the flow controller",Independent (state),"Controllable (setting, measured)",0 – 84.2,0 – 84.24
+Dust_feed,"continuous, 8 levels",mm³/s,"Volume of dust injected per second, constant within a run",Independent (state),Controllable (setting),59.11 – 317,59.11 – 317
+Dust,"categorical, 3 levels",–,"ISO 12103-1 test dust grade (A2 fine, A3 medium, A4 coarse)",Independent (state),Controllable (setting),"ISO 12103-1, A2 Fine Test Dust, ISO 12103-1, A3 Medium Test Dust, ISO 12103-1, A4 Coarse Test Dust","ISO 12103-1, A2 Fine Test Dust, ISO 12103-1, A3 Medium Test Dust, ISO 12103-1, A4 Coarse Test Dust"
+RUL,continuous,s,"Remaining useful life at each sample (ground truth, test only)",Dependent (target),–,not available,1.9 – 335.1
